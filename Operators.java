@@ -58,4 +58,108 @@ class Logical
      System.out.println(!(a>b));
      }
      }
+// Bitwise Operators
+import java.util.*;
+class Bitwise
+{
+  public static void main(String[]args)
+  {
+     int a;
+     int b;
+     Scanner sc= new Scanner(System.in);
+     System.out.println("Enter a and b values");
+     a=sc.nextInt();
+     b=sc.nextInt();
+     System.out.println("Bitwise OR: "+(a|b));
+     System.out.println("Biwise AND: "+(a&b));  
+     System.out.println("Complement: "+(~a));
+     System.out.println("Left shift: "+(a<<1));   
+     System.out.println(a<<2);
+     System.out.println("Right shift: "+(b>>1));
+     System.out.println(b>>2);
+     
+ }}
+// Assignment Operators
+import java.util.*;
+class Assignment
+{
+  public static void main(String[]args)
+  {
+     int a;
+     int b;
+     Scanner sc= new Scanner(System.in);
+     System.out.println("Enter a and b values");
+     a=sc.nextInt();
+     b=sc.nextInt();
+     System.out.println("Value of a is "+(a+=b));
+     System.out.println("Value of a is "+(a-=b));  
+     System.out.println("Value of a is "+(a*=b));
+     System.out.println("Value of a is "+(a/=b));   
+     System.out.println("Value of a is "+(a%=b));
+ }}
+// Increment and Decrement Operator
+import java.util.*;
+class Inc_Dec
+{
+  public static void main(String[]args)
+  {
+     int a;
+     int b;
+     Scanner sc= new Scanner(System.in);
+     System.out.println("Enter a and b values");
+     a=sc.nextInt();
+     b=sc.nextInt();
+     System.out.println("Post increment: "+(a++));
+     System.out.println("Value of a: "+a);
+     System.out.println("Pre increment: "+(++a)); 
+     System.out.println("Value of a: "+a);
+     System.out.println("Post decrement: "+(b--));
+     System.out.println("Value of b: "+b);
+     System.out.println("Pre decrement: "+(--b)); 
+     System.out.println("Value of b: "+b);
+  }
+}
+// Conditional Operators
+import java.util.*;
+class Conditional
+{
+  public static void main(String[]args)
+  {
+     int a;
+     int b;
+     Scanner sc= new Scanner(System.in);
+     System.out.println("Enter a and b values");
+     a=sc.nextInt();
+     b=sc.nextInt();
+     int Min=(a<b)?a:b;
+     int Max=(a>b)?a:b;
+     System.out.println("Minimum is "+Min);
+     System.out.println("Maximum is "+Max);
+ }}
+// Special Operators
+import java.util.*;
+class Inst
+{
+  public static void main(String[]args)
+  {
+     Inst obj=new Inst();
+     System.out.println(obj instanceof Inst);
+ }}
+ //Special Operators
+import java.util.*; 
+class Instance
+{
+  public static void main(String[]args)
+  {
+     Instance obj=new Instance();
+     System.out.println(obj instanceof Inst);
+ }}
+//Output
+System.out.println(obj instanceof Inst);
+                                       ^
+  symbol:   class Inst
+  location: class Instance
+1 error
+
+
 
