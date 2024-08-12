@@ -25,7 +25,7 @@ class Number
       }
     }
 }
-//ARMSTRONG
+//ARMSTRONG for three digit
 import java.util.*;
 class Number
 {
@@ -162,6 +162,36 @@ class Number
       
     }
     
+}
+//ARMSTRONG FOR ANY DIGIT
+import java.util.*;
+class Number
+{
+    public static void main(String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter num");
+        
+        float num=sc.nextFloat();
+        System.out.println("Enter num of digits: ");
+        int ndig=sc.nextInt();
+        int sum=0;
+        float temp=num;
+        while(num>0)
+        {
+            int rem=num%10;
+            sum+=(Math.pow(rem,ndig));
+            num=num/10;
+            
+        }
+      if(sum==temp)
+      {
+          System.out.println("Armstrong");
+      }
+      else{
+           System.out.println("Not an armstrong");
+      }
+    }
 }
 
     
