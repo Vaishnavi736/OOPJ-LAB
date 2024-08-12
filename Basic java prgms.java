@@ -135,6 +135,34 @@ class Number
 }
     
 }
+//PRINT THE INDIVIDUAL DIGITS
+class Number
+{
+    public static void main(String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter num");
+          int num=sc.nextInt();
+         System.out.println("Enter num of dig");
+        
+         int dig=sc.nextInt();
+        int sum=0;
+        int temp=num;
+        int i =dig;
+        while(num>0)
+        {
+            int rem=num%10;
+             
+             
+                 System.out.println("digit at" + i +"position is "+ rem);
+                 i--;
+             
+             num=num/10;
+        }
+      
+    }
+    
+}
 
     
 
