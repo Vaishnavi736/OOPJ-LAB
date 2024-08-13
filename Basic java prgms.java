@@ -135,7 +135,8 @@ class Number
 }
     
 }
-//PRINT THE INDIVIDUAL DIGITS
+//PRINT THE INDIVIDUAL DIGITS (REV ORDER)
+import java.util.*;
 class Number
 {
     public static void main(String[] args)
@@ -162,6 +163,33 @@ class Number
       
     }
     
+}
+//PRINT THE INDIVIDUAL DIGITS(RIGHT ORDER)
+import java.util.*;
+class Number
+{
+    public static void main(String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter num");
+        int num=sc.nextInt();
+        int sum=0;
+        int temp=num;
+        while(num>0)
+        {
+            int rem=num%10;
+            sum=(sum*10)+rem;
+            num=num/10;
+            
+        }
+    System.out.println("The digits are: ");
+        while(sum>0)
+         {
+             int rem=sum%10;
+             System.out.println(rem);
+             sum=sum/10;
+         }
+    }
 }
 //ARMSTRONG FOR ANY DIGIT
 import java.util.*;
