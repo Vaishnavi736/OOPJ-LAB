@@ -48,3 +48,22 @@ class Over
 }  
 /*Default constructor
   Value of n is 7*/
+//CHECK
+import java.util.*;
+class Clss
+{
+    static void program()
+    {
+        System.out.println("You entered a method");
+    }
+    int sum(int a,int b)
+    {
+          return a+b;
+    }
+    public static void main(String[]args)
+    {
+         program();
+         Clss obj=new Clss();
+         obj.sum(5,4);
+    }
+}             
