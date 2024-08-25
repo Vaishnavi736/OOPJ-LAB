@@ -111,3 +111,41 @@ class Fact
         System.out.println(fact(4));
     }
 }
+//PALINDROME RECURSIVE
+import java.util.*;
+class Palindrome
+{
+    static int rev(int n )
+    {
+        int sum=0;
+        if(n==0)
+        {
+            return sum ;
+        }
+        else
+        {
+            int rem=n%10;
+            sum=(sum*10)+rem;
+            n=n/10;
+            return n;
+        }
+    }
+    public static void main(String []args)
+    {
+        int num;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter number");
+        num=sc.nextInt();
+        int sum=0;
+        int temp=num;
+        rev(num);
+        if(sum==temp)
+        {
+            System.out.println("PALINDROME");
+        }
+        else{
+            System.out.println("NOT A PALINDROME");
+        }
+        
+    }
+}
