@@ -198,3 +198,78 @@ class StrPal
         }
 
 }
+//STATIC NESTED CLASS
+import java.util.*;
+class Test
+{
+   int x=5;
+   static int y=7;
+   static class Nested
+   {
+       static int z=9;
+       static void display()
+       {
+          // System.out.println("x is "+x);
+           System.out.println("y is "+y);
+           System.out.println("z is "+z);
+       }
+       void bracket()
+       {
+           // System.out.println("x is "+x);
+           System.out.println("y is "+y);
+           System.out.println("z is "+z);
+       }
+   }
+   public static void main(String[]args)
+   {
+       Test.Nested.display();
+       Test.Nested in=new Test.Nested();
+       in.bracket();
+   }
+}
+//NON-STATIC NESTED CLASS
+import java.util.*;
+class Outer
+{
+    int x=8;
+    static int y=6;
+    class Inner
+    {
+        void display()
+        {
+            System.out.println("x is "+x);
+        }
+    }
+    public static void main(String[]args)
+    {
+        Outer out=new Outer();
+        Outer.Inner in = out.new Inner();
+        in.display();
+    }
+}
+//NON-STATIC NESTED CLASS INSIDE A METHOD
+import java.util.*;
+class Outer
+{
+    int x=2;
+    void test()
+    {
+        for(int i=0;i<=10;i++)
+        {
+            class Inner
+            {
+                void display()
+                {
+                System.out.println("x = "+x);
+                }
+             }
+         Inner in=new Inner();
+         in.display();
+        }
+    }
+          public static void main(String[]args)
+    {
+        Outer out=new Outer();
+        out.test();
+    }
+}
