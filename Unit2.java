@@ -111,7 +111,7 @@ class Fact
         System.out.println(fact(4));
     }
 }
-//PALINDROME RECURSIVE
+//NUMBER PALINDROME RECURSIVE
 import java.util.*;
 class Palindrome
 {
@@ -148,4 +148,54 @@ class Palindrome
         }
         
     }
+}
+//STRING PALINDROME RECURSIVE
+import java.util.*;
+class StrPal
+{
+    static boolean checkPal(String str,int s ,int e)
+    {
+        if(s==e)
+        {
+            return true;
+        }
+        if(str.charAt(s)!=str.charAt(e))
+        {
+            return false;
+        }
+        if(s<e+1)
+        {
+            return checkPal(str,s+1,e-1);
+
+        }
+          return true;
+    }
+    static boolean isPal(String str)
+    {
+        int n=str.length();
+        if(n==0)
+        {
+            return true;
+        }
+        else
+        {
+            return checkPal(str,0,n-1);
+        }
+    }    
+        public static void main(String[]args)
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter the string");
+            String word=sc.nextLine();
+            if(isPal(word))
+            {
+                System.out.println(word+" is a PALINDROME");
+            }
+            else
+            {
+                  System.out.println(word+" is not a PALINDROME"); 
+            }
+            
+        }
+
 }
