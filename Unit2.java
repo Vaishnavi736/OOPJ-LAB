@@ -177,10 +177,9 @@ class StrPal
         {
             return true;
         }
-        else
-        {
-            return checkPal(str,0,n-1);
-        }
+      
+         return checkPal(str,0,n-1);
+        
     }    
         public static void main(String[]args)
         {
