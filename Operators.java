@@ -17,7 +17,40 @@ class Arithmetic
      System.out.println("Division : "+(a/b));   
      System.out.println("Modulo Division : "+(a%b));   
  }}
-
+//ARITHMETIC OPERATORS USING SWITCH
+import java.util.*;
+class Arithmetic
+{
+  public static void main(String[]args)
+  {
+     Scanner sc= new Scanner(System.in);
+     System.out.println("Enter a and b values");
+     int a=sc.nextInt();
+     int b=sc.nextInt();
+     System.out.println("Enter an arithmetic operator");
+     char ch=sc.next().charAt(0);
+     switch(ch)
+     {
+         case'+':
+              System.out.println("Addition : "+(a+b));
+              break;
+         case '-':      
+              System.out.println("Subtraction : "+(a-b));  
+              break;
+         case '*':
+              System.out.println("Multiplication : "+(a*b));
+               break;
+         case '/':
+              System.out.println("Division : "+(a/b));   
+               break;
+         case '%':
+              System.out.println("Modulo Division : "+(a%b));   
+               break;
+        default:
+                System.out.println("It's not an arithmetic operator");
+       }
+  }
+}
 //Relational Operators
 import java.util.*;
 class Relational
