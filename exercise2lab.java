@@ -69,3 +69,28 @@ class Clss
          obj.sum(5,4);
     }
 }             
+//CLASS MECHANISM
+import java.util.*;
+class Method
+{
+    static void display()
+    {
+       System.out.println("You entered a static method");
+    }
+    int add(int a,int b)
+    {
+        return (a+b);
+    }
+    public static void main(String[]args)
+    {
+          display();
+          Method obj=new Method();
+          Scanner sc=new Scanner(System.in);
+          System.out.println("Enter a,b values");
+          int a=sc.nextInt();
+          int b=sc.nextInt();
+          int sum=obj.add(a,b);
+          System.out.println("addition: "+sum);
+     }
+ }         
+           
