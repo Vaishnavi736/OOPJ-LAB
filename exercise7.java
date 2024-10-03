@@ -1,0 +1,1 @@
+//write a java program that creates threadsby extending thread class.First thread display Good Morning every 1 sec,second thread display Hello every 2 sec and the third display Welcoe every 3 sec(Repeat the same by implementing runnable)
