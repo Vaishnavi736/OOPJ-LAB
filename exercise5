@@ -1,0 +1,36 @@
+//
+interface A
+{
+    void showA();
+}
+interface B
+{
+    void showB();
+}
+interface C
+{
+    void showC();
+}
+class D implements A,B,C
+{
+    public static void main(String[]args)
+    {
+        D obj = new D();
+        obj.showA();
+         obj.showB();
+          obj.showC();
+    }
+    public void showA()
+    {
+        System.out.println("INterface A");
+    }
+     public void showB()
+    {
+        System.out.println("INterface B");
+    }
+     public void showC()
+    {
+        System.out.println("INterface C");
+    }
+}
+//
