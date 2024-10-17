@@ -130,6 +130,7 @@ Enter age
 Exception in thread "main" java.lang.ArithmeticException: Not eligible to vote
 	at User.validate(Checks.java:18)
 	at Checks.main(Checks.java:9)
+//USER-DEFINED EXCEPTION	
 import java.util.*;
 public class Checks
 {
