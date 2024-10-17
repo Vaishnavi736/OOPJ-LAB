@@ -130,3 +130,34 @@ Enter age
 Exception in thread "main" java.lang.ArithmeticException: Not eligible to vote
 	at User.validate(Checks.java:18)
 	at Checks.main(Checks.java:9)
+import java.util.*;
+public class Checks
+{
+      public static void main(String[]args)
+      {
+             Scanner sc=new Scanner(System.in);
+             System.out.println("Enter age");
+             int a=sc.nextInt();
+             User.validate(a);
+      }    
+}
+class User 
+{
+       public static void validate(int age) throws ArithmeticException
+       {
+            if(age<18)
+            {
+                 throw new ArithmeticException("Not eligible to vote"); 
+            }
+            else
+            {
+                     System.out.println("Eligible to vote");
+            }
+        }
+ }                          
+  //OUTPUT
+Enter age
+1
+Exception in thread "main" java.lang.ArithmeticException: Not eligible to vote
+	at User.validate(Checks.java:18)
+	at Checks.main(Checks.java:9)
