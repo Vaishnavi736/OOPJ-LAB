@@ -14,21 +14,58 @@ class ExceptionHandling
             int denominator = sc.nextInt();
             int result = numerator / denominator;
             System.out.println("Result: " + result);
-        } 
+          
+        }
         catch (ArithmeticException ae) 
         {
             System.out.println(ae);
-        } catch (InputMismatchException ime) 
+        }
+        catch (InputMismatchException ime) 
+        {
+            System.out.println(ime);
+        }
+         finally
+        {
+            System.out.println("You entered finally block");
+        }
+    
+        try
+        {
+            System.out.println("Enter age");
+            int a=sc.nextInt();
+            validate(a);
+        }
+         catch (InputMismatchException ime) 
         {
             System.out.println(ime);
         } 
-        finally
+    }
+        public static void validate(int age) throws ArithmeticException
         {
-            System.out.println("Finally!!,you entered finally block");
+             if(age<18)
+            {
+                 throw new ArithmeticException("Not eligible to vote"); 
+            }
+            else
+            {
+                     System.out.println("Eligible to vote");
+            }
         }
-   }     
-}
-
+        
+   }
+//OUTPUT
+Enter numerator: 
+4
+Enter denominator: 
+0
+java.lang.ArithmeticException: / by zero
+You entered finally block
+Enter age
+7
+ERROR!
+Exception in thread "main" java.lang.ArithmeticException: Not eligible to vote
+	at ExceptionHandling.validate(ExceptionHandling.java:49)
+	at ExceptionHandling.main(ExceptionHandling.java:36)
 //MULTIPLE CATCH CLAUSES
 import java.util.*;
 class Multiple
@@ -53,7 +90,9 @@ class Multiple
                  System.out.println(npe);
             }
        }
- }      
+ }    
+//OUTPUT
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
 //BUILT-IN EXCEPTIONS
 import java.util.*;
 class Built
@@ -98,38 +137,7 @@ java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
 java.lang.ArithmeticException: / by zero
 java.lang.NullPointerException: Cannot invoke "String.length()" because "<local1>" is null
 These are some of the built-in exceptions
- //USER-DEFINED EXCEPTION
-    import java.util.*;
-public class Checks
-{
-      public static void main(String[]args)
-      {
-             Scanner sc=new Scanner(System.in);
-             System.out.println("Enter age");
-             int a=sc.nextInt();
-             User.validate(a);
-      }    
-}
-class User 
-{
-       public static void validate(int age)
-       {
-            if(age<18)
-            {
-                 throw new ArithmeticException("Not eligible to vote");
-            }
-            else
-            {
-                     System.out.println("Eligible to vote");
-            }
-        }
- }                          
-//OUTPUT
-Enter age
-1    
-Exception in thread "main" java.lang.ArithmeticException: Not eligible to vote
-	at User.validate(Checks.java:18)
-	at Checks.main(Checks.java:9)
+
 //USER-DEFINED EXCEPTION	
 import java.util.*;
 public class Checks
