@@ -140,7 +140,7 @@ public class Checks
              System.out.println("Enter age");
              int a=sc.nextInt();
              User.validate(a);
-      }    
+    }    
 }
 class User 
 {
@@ -155,7 +155,7 @@ class User
                      System.out.println("Eligible to vote");
             }
         }
- }                          
+}        
   //OUTPUT
 Enter age
 1
