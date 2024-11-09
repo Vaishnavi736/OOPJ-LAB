@@ -348,3 +348,80 @@ class Bike extends Vehicle
         obj.run();
     }
 }
+//EHM
+import java.util.*;
+class Test
+{
+    public static void main(String[]args)
+    {
+        try
+        {
+            System.out.println(34/0);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("ArithmeticException");
+        }
+        finally
+        {
+            System.out.println("Finally block");
+        }
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter age");
+        try
+        {
+            
+            int a=sc.nextInt();
+            validate(a);
+        }
+        catch(InputMismatchException ime)
+        {
+             System.out.println("InputMismatchException");
+        }
+    }
+    
+}
+public class User
+{
+        public static void validate(int age) 
+        {
+            if(age<18)
+            {
+                throw new ArithmeticException("Not eligible to vote");
+            }
+            else
+            {
+                System.out.println("Eligible");
+            }
+                
+            
+        }
+        
+    
+}
+//throw
+import java.util.*;
+class Test
+{
+    public static void main(String[]args)
+    {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter age");
+    int a =sc.nextInt();
+    User.validate(a);
+    }
+}
+class User
+{
+    public static void validate(int age)
+    {
+        if(age<18)
+        {
+            throw new ArithmeticException("Not eligible");
+        }
+        else
+        {
+            System.out.println("Eligible");
+        }
+    }
+}
